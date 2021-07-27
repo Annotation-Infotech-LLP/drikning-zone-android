@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.OtpActivity"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="30dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerInParent="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inner_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="12dp"
+                android:text="OTP"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/otp_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="An OTP has been sent to the Contact Number you entered Please Check and Enter the OTP for Contact Number Verification"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/inner_constraint"
+                app:layout_constraintEnd_toEndOf="@id/textView2"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintStart_toStartOf="@id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_otp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:tooltipText="Enter the OTP"
+                app:boxStrokeColor="@color/colorAccent"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toTopOf="@+id/otp_info"
+                app:layout_constraintEnd_toEndOf="@id/otp_info"
+                app:layout_constraintStart_toStartOf="@id/otp_info"
+                app:layout_constraintTop_toBottomOf="@+id/otp_info"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter the OTP"
+                    android:inputType="text"
+                    android:paddingStart="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_input_otp"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_otp">
+
+                <Button
+                android:id="@+id/verify_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shadoweffect"
+                android:elevation="16dp"
+                android:text="Verify"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/text_input_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+                <!--<Button-->
+                    <!--android:id="@+id/resend_otp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--android:background="@drawable/shadoweffect"-->
+                    <!--android:elevation="16dp"-->
+                    <!--android:text="Resend"-->
+                    <!--android:backgroundTint="@color/inactive_dots"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textSize="20sp"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintHorizontal_bias="1.0"-->
+                    <!--app:layout_constraintStart_toEndOf="@id/text_input_email"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/text_input_email"-->
+                    <!--app:layout_constraintVertical_bias="0.0" />-->
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

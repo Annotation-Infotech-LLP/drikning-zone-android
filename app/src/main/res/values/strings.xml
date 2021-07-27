@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Drinking Zone</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <!--First slide-->
+    <string name="slide_1_title">WELCOME TO DRINKING ZONE</string>
+    <string name="slide_1_desc">Make your Water Can or any Cool Drink ordering system so easy and Handy.</string>
+
+    <!--Second slide-->
+    <string name="slide_2_title">Easy to Place Order</string>
+    <string name="slide_2_desc">You Can Easily Place Order for Water Cans or Cold Drinks, just in some Clicks</string>
+
+    <!--Third slide-->
+    <string name="slide_3_title">Can Order a Monthly or weekly Booking as well</string>
+    <string name="slide_3_desc">Dont need to worry of ordering Daily, u can directly place a order for Booking for a month or a week.</string>
+
+    <!--Fourth slide-->
+    <string name="slide_4_title">Refer to a Friend and Earn Credits</string>
+    <string name="slide_4_desc">Refer this app to any of your friend and Earn Cash points which u can your for orders</string>
+
+    <!--Fifth slide-->
+    <string name="slide_5_title">Apt Service within 60 Minutes</string>
+    <string name="slide_5_desc">Your Order will be delivered within 60 minutes, it is cool, right?</string>
+
+    <!--Sixth slide-->
+    <string name="slide_6_title">Lets Go and Check it out</string>
+    <string name="slide_6_desc">Also please have a look at your Terms and Conditions</string>
+
+    <string name="my_preference">"com.abc.com.MyPref" </string>
+    <string name="my_preference_key">"com.abc.com.MyPrefKey"</string>
+
+    <string name="access_code">Access Code</string>
+    <string name="pay_button">Pay</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="rsa_url">RSA Key Url</string>
+</resources>

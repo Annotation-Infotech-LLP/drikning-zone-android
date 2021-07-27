@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="3dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:id="@+id/updateTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/updateNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:gravity="start|center"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/versionCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:textColor="#24887B"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

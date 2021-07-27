@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Carted Items"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_products_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" /-"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="16dp">
+
+
+            <Button
+                android:id="@+id/proceed_to_checkout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shadoweffect"
+                android:text="Proceed to Confirm"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--    </LinearLayout>-->
+
+</LinearLayout>
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/white">-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/cart_info"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:text="Your Cart"-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textColor="@color/colorPrimaryDark"-->
+    <!--            android:textSize="18sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/cart_products_list"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="8dp"-->
+    <!--                android:layout_marginEnd="8dp"-->
+    <!--                android:layout_marginBottom="8dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/cart_info"-->
+    <!--                >-->
+    <!--            </androidx.recyclerview.widget.RecyclerView>-->
+
+    <!--        <View-->
+    <!--            android:id="@+id/divider"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:background="@color/colorPrimaryDark"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/cart_products_list"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/layout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:gravity="right"-->
+
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/divider"-->
+    <!--            app:layout_constraintVertical_bias="0.68">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="TOTAL : "-->
+    <!--                android:textColor="@color/orange"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/total_price"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/colorPrimaryDark"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text=" /-"-->
+    <!--                android:textColor="@color/colorPrimaryDark"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:textStyle="bold" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/btn_layout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_marginEnd="8dp"-->
+    <!--            android:layout_marginBottom="16dp"-->
+    <!--            android:gravity="right"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.0"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/layout">-->
+
+
+    <!--            <Button-->
+    <!--                android:id="@+id/proceed_to_checkout_btn"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:background="@drawable/shadoweffect"-->
+    <!--                android:text="Proceed to Checkout"-->
+    <!--                android:textColor="@color/white" />-->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</ScrollView>-->

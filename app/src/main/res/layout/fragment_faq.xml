@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:ignore="InefficientWeight, HardcodedText, RtlSymmetry, UselessParent, RtlHardcoded, ContentDescription, ScrollViewSize"
+    tools:targetApi="lollipop">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="FAQs"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/info_text"/>
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here is the regularly asked FAQs "
+            android:textAlignment="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:layout_constraintBottom_toTopOf="@+id/divider"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/info_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/about_us_content"/>
+
+        <TextView
+            android:id="@+id/about_us_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:text="This section contains information related to DRINKING ZONE Mobile Application. If you cannot find an answer to your question, please call us at our customer care, we will be happy to answer you.\n\n
+Orders\n
+1. How do I order?\n
+Ordering a water can,water bottles,cold drinks,energy drinks was never this much easy earlier. All you need to do is install DRINKING ZONE App,and just few taps and yohooo your order is done\n
+\n2. Money deducted from PayTm wallet but order rejected.\n
+We deeply regret the inconvenience. We tried our best to provide you unique customer experience. But, due to some unavoidable circumstances, we might have to cancel an order. Amount deducted from your PayTm wallet will be transacted back to your PayTm account.Please give us one more opportunity to provide you the best customer experience.\n\n
+DRINKING ZONE is committed to provide a very unique and pleasing customer experience to customers.Based on various customer requirements, we have come up with three different kinds of delivery types:\n
+•  Normal delivery: Order will be delivered within 50 minutes from the time of order placed\n
+•  Quick delivery: Order will be delivered within 30 minutes from the time of order placed\n
+•  Scheduled delivery: User can select from wide range of time slots as per their convenience.\n
+Cancellations and Return\n
+\n3. Can I return empty can of any brand?\n
+We accept empty can of same brand what has been ordered. Example: User has ordered 1 Bisleri can, user is supposed to return only empty Bisleri can. DRINKING ZONE representative will not accept empty cans of any other brand.\n
+Unknowingly, I have selected an empty can type but I don’t have the empty can of same brand. What should I do?\n
+DRINKING ZONE understand your concern. There are two ways to avoid any discrepancies:\n
+One can pay the refundable amount of 150/- per can as cash to DRINKING ZONE representative.
+Alternatively, DRINKING ZONE representative can cancel the order and once order is cancelled, one can place the order again and receive the water can instantly.\n
+Payment\n
+\n 4. How do I pay?\n
+User can pay using one of the available 2 mode of payments.\n
+•  Cash on Delivery (COD)\n
+•  PayTm wallet\n
+•  Phone pay.\n\n
+5. Why do I need to pay advance deposit for empty water can?\n
+Each empty can costs 150 rupees. If one does not have an empty can, one have to pay the advance empty can cost.Please note that this amount is refundable, if one returns the empty can\n
+
+\n 6. What is promo code redemption process?\n
+Simple and easy step:\n
+•  Enter ‘Promo Code’ at payment page and click on “Apply” to check for eligibility\n
+•  When code is applied successfully, select one of the payment mode, and click on “Place Order”.\n
+\n 7. What is the cost associated with different delivery types?\n
+There are no extra cost for Normal delivery and Scheduled delivery. However, to provide our customers a unique customer experience,there will be a nominal charge of rupee 20 for Quick delivery\n
+"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:lineHeight="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            tools:targetApi="p">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

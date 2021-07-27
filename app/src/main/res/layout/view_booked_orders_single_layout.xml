@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/booked_product_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/softdrinks" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Product Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/booking_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Booking Number Here"
+                        android:textColor="@color/colorBitterSweet"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price per item: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/product_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" /-"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/deposit_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/product_deposit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Price: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/total_amt_paid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" /-"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sub-Total: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/sub_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" /-"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/quantity_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/product_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Booked On :"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/booked_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="date"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Date: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="4000/-"
+                            android:textColor="@color/colorBitterSweet"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End Date: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="date"
+                            android:textColor="@color/colorBitterSweet"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                >
+                <Button
+                    android:id="@+id/renewal_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shadoweffect"
+                    android:text=" Renew "
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

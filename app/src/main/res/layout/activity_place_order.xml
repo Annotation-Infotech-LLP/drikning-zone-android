@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CheckOutBillingStage.PlaceOrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:id="@+id/address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver To:"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/address_recycler_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/address_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/change_address_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Change"
+                        android:background="@drawable/shadoweffect"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_layout"
+            />
+
+        <TextView
+            android:id="@+id/products_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All your Selected Products"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/all_ordering_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/products_head"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/booked_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintTop_toBottomOf="@+id/products_head">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/softdrinks" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp">
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:id="@+id/deposit_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit: "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/product_deposit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit"
+                            android:textColor="@color/colorBitterSweetDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/refill_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Is Fresh: "
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/isfresh_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:textColor="@color/colorBitterSweetDark"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Quantity:"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/sub_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4000/-"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBitterSweetDark"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/all_ordering_products"
+            app:layout_constraintBottom_toTopOf="@+id/layout"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:layout_constraintVertical_bias="0.68">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL : "
+                android:textColor="@color/colorBitterSweet"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" /-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout"
+            app:layout_constraintBottom_toTopOf="@+id/layout1"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3"
+            app:layout_constraintVertical_bias="0.68">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Summary of Products"
+                android:textColor="@color/colorBitterSweet"
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Number of Products"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="16sp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/number_of_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Total to be Paid"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="16sp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/amount_to_be_paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" /-"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/is_quick_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="5dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="Need a Quick Delivery?"-->
+<!--                    android:textColor="@color/colorBlue"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:layout_weight="1"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="*If Yes, 20 Rupees would be charged extra and Delivered within 30 minutes \n If No, no Extra Charges will be applied, but delivered within 50 to 60 minutes."-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:layout_weight="1"/>-->
+
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/quick_delivery_selector"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/quick_delivery_type_yes"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Yes"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:textColor="@color/colorBlue"-->
+<!--                        android:textSize="16sp" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/quick_delivery_type_no"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="No"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/colorBlue"/>-->
+<!--                </RadioGroup>-->
+
+
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/use_wallet_cash_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Do You Want to use Wallet Cash?"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="16sp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="*If Yes, then Please Select Yes and you can use only 20/- of your wallet cash per order, else select No and proceed"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+
+
+                <RadioGroup
+                    android:id="@+id/use_wallet_cash_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/use_wallet_cash_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Yes"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp" />
+                    <RadioButton
+                        android:id="@+id/use_wallet_cash_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="No"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlue"/>
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="*For your 1st Order, you would get discount of 20/- from your total amount."
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/advance_booking_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="5dp">-->
+
+<!--&lt;!&ndash;                <RadioGroup&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:id="@+id/quick_delivery_selector"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginStart="8dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:orientation="horizontal">&ndash;&gt;-->
+
+<!--                &lt;!&ndash;                    <RadioButton&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:id="@+id/quick_delivery_type_yes"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:text="Yes"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:textColor="@color/colorBlue"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:textSize="16sp" />&ndash;&gt;-->
+
+<!--                &lt;!&ndash;                    <RadioButton&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:id="@+id/quick_delivery_type_no"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:text="No"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:textSize="16sp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:textColor="@color/colorBlue"/>&ndash;&gt;-->
+<!--                &lt;!&ndash;                </RadioGroup>&ndash;&gt;-->
+<!--                -->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="Is this an Advance Booking?"-->
+<!--                    android:textColor="@color/colorBlue"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:layout_weight="1"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="*If Yes, then Please Select Yes and Enter the appropriate Date and time of Delivery. \n Also, delivery would be made in the day hours only."-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:layout_weight="1"/>-->
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/delivery_type_selector"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/delivery_type_advanced"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Yes"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:textColor="@color/colorBlue"-->
+<!--                        android:textSize="16sp" />-->
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/delivery_type_not_advanced"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="No"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/colorBlue"/>-->
+<!--                </RadioGroup>-->
+
+<!--                -->
+<!--                -->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/delivery_types_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Delivery Types"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="16sp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="*Scheduled deliveries would be made in the day hours only."-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textAlignment="viewStart"-->
+<!--                    android:layout_weight="1"/>-->
+                <RadioGroup
+                    android:id="@+id/delivery_type_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/quick_delivery_type_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Normal"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlue"/>
+
+                    <RadioButton
+                        android:id="@+id/quick_delivery_type_yes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Quick"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/delivery_type_advanced"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Scheduled"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/normal_disclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="*Within 1 hour (No Extra Charge)"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:textAlignment="viewStart"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/quick_disclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="*Within 30 min (Rs. 20/- Extra Charge)"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:textAlignment="viewStart"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/scheduled_disclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="*Delivered At Day Time Only"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:textAlignment="viewStart"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delivery_selection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/show_datepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Date"
+                    android:background="@drawable/button3"
+                    android:textColor="@color/colorBlue"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"/>
+                <Button
+                    android:id="@+id/show_timepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Time"
+                    android:background="@drawable/button3"
+                    android:textColor="@color/colorBlue"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <TimePicker
+                android:id="@+id/timePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/delivery_date"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tooltipText="Delivery Date You Selected"
+                app:errorEnabled="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Delivery Date You Selected"
+                    android:inputType="datetime"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingLeft="10dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/payment_mode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Payment Mode"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"/>
+
+                <RadioGroup
+                    android:id="@+id/payment_mode_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/type_cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="CASH"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="14sp" />
+                    <RadioButton
+                        android:id="@+id/type_online"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ONLINE"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorBlue"/>
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+            <Button
+                android:id="@+id/proceed_to_checkout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadoweffect"
+                android:text="   Place Order   "
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

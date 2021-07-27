@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/logo"-->
+<!--                android:layout_gravity="center_horizontal"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Terms And Conditions"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="18sp"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintTop_toBottomOf="@+id/info_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/terms"/>
+
+            <TextView
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. We at DRINKING ZONE are working to organize water supply management,cold drinks,energy drink and provide you good quality services to your doorsteps.\n\n  We are happy to announce that we have reached our first milestone and started our water,cold drinks,and   energy drinks delivering services. \nNow get you water can,water bottles,cold drinks,softdrinks to your doorstep with just few clicks and hazzle free steps.\n\n Want to know about how we operate ? \nDownload our Android application from Google Play Store.n\n
+\n2.  The period for canceling the customer order will be 5 minutes. If the customer cancel the order after 5 minutes,the order will be confirmed and order is delivered.if customer cancel within 5 minutes the payment will be refunded immediately.\n\n
+3. If the customer does not have any vessel or bottle to take water and he wants to take our bottle then he will also have to deposit the security value of the bottle which is per bottle 150 rs. It will be refunded after giving bottle.\n\n
+"
+                android:lineHeight="25dp"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:layout_margin="10dp"
+                android:textAlignment="inherit"
+                tools:targetApi="p" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

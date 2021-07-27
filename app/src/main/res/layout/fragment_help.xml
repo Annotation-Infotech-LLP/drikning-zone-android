@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:ignore="InefficientWeight, HardcodedText, RtlSymmetry, UselessParent, RtlHardcoded, ContentDescription, ScrollViewSize, UseCompoundDrawables, SmallSp"
+    tools:targetApi="lollipop">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Help Desk"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/info_text"/>
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If any query or issues to report, Please Contact the following information give below"
+            android:textAlignment="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:layout_constraintBottom_toTopOf="@+id/divider"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/info_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/contact_text"/>
+
+        <TextView
+            android:id="@+id/contact_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:lineHeight="30dp"
+            android:text="Telephonic Contact Details"
+            android:textStyle="bold"
+            android:textColor="@color/darkBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:layout_constraintBottom_toTopOf="@+id/layout1">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_text"
+            >
+
+            <TextView
+                android:id="@+id/landline_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Landline Number: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/landline_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mobile_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:text="Mobile Contact Details"
+            android:textStyle="bold"
+            android:textColor="@color/darkBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout1"
+            app:layout_constraintBottom_toTopOf="@+id/layout2">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_text">
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+918779614646"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/mobile_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+919930054623"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/mobile_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+917021340154"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/layout6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:text="Email Details"
+            android:textStyle="bold"
+            android:textColor="@color/darkBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_text"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Id: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/email_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="drinkingzone.development@gmail.com"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/email2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Id: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/email_main_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="drinkingzone.v@gmail.com"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/layout5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/website_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textSize="14sp"-->
+<!--            android:text="Website Details"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/darkBlue"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/divider3">-->
+<!--        </TextView>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/website_text"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/website"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Website URL: "-->
+<!--                android:textColor="@color/grey"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:textSize="14sp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/website_main"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="www.drinkingzone.in"-->
+<!--                android:textAlignment="viewEnd"-->
+<!--                android:textColor="@color/colorPrimaryDark"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textStyle="bold"/>-->
+<!--        </LinearLayout>-->
+
+
+<!--        <View-->
+<!--            android:id="@+id/divider4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/layout4"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"/>-->
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:text="Office Address"
+            android:textStyle="bold"
+            android:textColor="@color/darkBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3">
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/layout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_text"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: "
+                android:textColor="@color/grey"
+                android:layout_gravity="start"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DRINKING ZONE, Shop no.3, House no.833,at Ranjanpada, Sector-27, near Arihant Krupa Building, Kharghar, Navi Mumbai,410210."
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/layout7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

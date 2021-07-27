@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "432806558667",
+    "firebase_url": "https://drinkingzone-3d8bd.firebaseio.com",
+    "project_id": "drinkingzone-3d8bd",
+    "storage_bucket": "drinkingzone-3d8bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432806558667:android:2ccb02065171adb670544e",
+        "android_client_info": {
+          "package_name": "com.annotation.drinking_zone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432806558667-ljd0nueitd2lrpjp53bfttflddfkbj77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.annotation.drinking_zone",
+            "certificate_hash": "e7d4d204a0cb2b6d274c533d475fddbe2c6753a3"
+          }
+        },
+        {
+          "client_id": "432806558667-nlb1ou1cctp29eliv722jfbqoaf0cta7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1l61QyLRCOaGlwFadD_uJU0Nv5GI1DGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432806558667-nlb1ou1cctp29eliv722jfbqoaf0cta7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

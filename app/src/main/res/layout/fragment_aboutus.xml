@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:ignore="InefficientWeight, HardcodedText, RtlSymmetry, UselessParent, RtlHardcoded, ContentDescription, ScrollViewSize"
+    tools:targetApi="lollipop">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="About Us"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/info_text"/>
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here is the basic Gist about the Application and the Organisation Developed it."
+            android:textAlignment="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:layout_constraintBottom_toTopOf="@+id/divider"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/info_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/about_us_content"/>
+
+        <TextView
+            android:id="@+id/about_us_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:text="How often have you followed up with your water can Supplier? \n\nMost of the times customers end up calling multiple times to know the status of their can ordered. There is rise in this problem in many metro cities. We at DRINKING ZONE are not just looking to solve the problem, we are dedicated to build a success story around it.We are committed to provide a unique pleasant ordering experience to all the customers.
+\n\nDRINKING ZONE is one of its first kind of water can supply management system in India.We enable users to order a can with just few taps on an app. \nWe are providing three different kind of delivery types to our customers to suit their requirement,even we added Cold Drinks,Soft Drinks,Energy Drinks at best prices for our customers. We value customers time and money.As a pilot project we are launching the service in Kharghar.We are planned to extend the service across the navi mumbai. We are ambitious to expand the service in other major cities in India.
+\n\nDRINKING ZONE is providing online 100% pure and best Quality of Drinking Water. DRINKING ZONE working to organize water supply management and provide you good quality water services to your doorsteps. DRINKING ZONE offering 20 Liter Pure Water Jar,1Liter-500MLwater bottles,200ml cups, Cold drinks, soft drinks, energy drinks to our client. We are the supplier of water cans of numerous brands and give you the guarantee that we supply only quality and original water. We believe in quality and never compromise with quality.
+
+\n\nYou Can Book Drinking Water with easily steps:
+\n1. Easily Register with Your Mobile Number and Email id.
+\n2. Login
+\n3. Choose Your Delivery Location
+\n4. Click on Book Now Button and Choose Your Water Brands and Quantity.
+\n5. Then Simply Click on Confirm Order and Confirm Delivery Address
+
+6. Your order would be delivered Within 50 Minutes on Your Home."
+            app:layout_constraintEnd_toEndOf="parent"
+            android:lineHeight="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            tools:targetApi="p">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

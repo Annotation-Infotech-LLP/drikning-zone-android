@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Privacy Policies"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="18sp"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintTop_toBottomOf="@+id/info_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/terms"/>
+
+            <TextView
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DRINKING ZONE Respects you privacy.This privacy policy provides succinctly the manner your data is collected and used by DRINKING ZONE on the app.As a visitor to the app, customer you are advised to please read the privacy policy carefully.By accessing the services provided by the app you agree to the collection and use of your data by DRINKING ZONE in the manner provided in this policy.\n\n
+Registration / User Information\n\n
+In order to use our app, a user must first complete the registration form. During registration a user is required to give certain information such Name including First and  Email Address, Mobile Phone Number and Contact Details, Postal Code. This information is used to contact you about the products/services on our app in which you have expressed interest. The Information as supplied by the users enables us to improve our apps and provide you the most user-friendly experience.\n
+All required information is service dependent and we may use the above said user information to, maintain, protect, and improve its services (including advertising services) and for developing new services.\n
+Such information will not be considered as sensitive if it is freely available and accessible in the public domain or is furnished under the Right to Information Act, 2005 or any other law for the time being in force.\n\n
+Information Collection, Use, and Sharing\n\n
+DRINKING ZONE is the sole owner of the information collected on this app. DRINKING ZONE only have access to / collect information that you voluntarily give us via email or other direct contact from you or through registration process. DRINKING ZONE will not sell or rent this information to anyone. DRINKING ZONE will use your information to respond to you, regarding the reason you contacted us. DRINKING ZONE will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order. Unless you ask us not to, we may contact you via Emails, SMS, WhatsApp Messages and / or Calls in the future to tell you about specials, new products or services, or changes to this privacy policy.\n\n
+Your Access to and Control Over Information\n\n
+You may opt out of any future contacts from us at any time. You can do the following at any time online or contacting us via the email address or phone number given on our app - Contact Us section:\n
+•  See what data we have about you, if any.\n
+•  Change/correct any data we have about you.\n
+•  Have us delete any data we have about you.\n
+•  Express any concern you have about our use of your data.\n\n
+Information Security\n\n
+DRINKING ZONE take precautions to protect your information. When you submit sensitive information via the app, your information is protected both online and offline. Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the footer and looking for https at the beginning of the address of the Web page.\n
+While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.\n\n
+"
+                android:lineHeight="25dp"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:layout_margin="10dp"
+                android:textAlignment="inherit"
+                tools:targetApi="p" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
